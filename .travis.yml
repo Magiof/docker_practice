@@ -9,6 +9,7 @@ services:
   - docker
 
 before_install:
+  - nvm install node
   - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 
 script:
