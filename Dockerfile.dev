@@ -2,11 +2,10 @@
 FROM node:16.13.1
 
 # mysql이 실행 할 준비가 되고 나서 실행할 수 있도록
-# rds 사용 시 안써도 무방함
 # dockerize는 도커 컨테이너의 실행순서를 결정해줄 수 있는 프로그램
-ENV DOCKERIZE_VERSION v0.2.0
-RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \  
-    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+# ENV DOCKERIZE_VERSION v0.2.0
+# RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \  
+#     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 
 # app 디렉토리 , working 디렉토리 생성
@@ -16,14 +15,14 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install dependencies
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 
 # Bundle app source
 COPY . .
 
-RUN chmod +x docker-entrypoint.sh  
-ENTRYPOINT ./docker-entrypoint.sh
+# RUN chmod +x docker-entrypoint.sh  
+# ENTRYPOINT ./docker-entrypoint.sh
 
 # Exports
 EXPOSE 8080
