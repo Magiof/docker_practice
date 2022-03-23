@@ -1,5 +1,5 @@
 language: node_js
-  - "16"
+  - node
 
 branches:
  only:
@@ -9,7 +9,6 @@ services:
   - docker
 
 before_install:
-  - npm install -g npm@latest # 버전에러 픽스
   - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 
 script:
