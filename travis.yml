@@ -1,0 +1,21 @@
+language: generic
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
+
+script:
+  - docker run -e CI=true tjddnjs7559/nemo_test npm run dev
+
+after_success:
+  #각 이미지 빌드 
+  - docker build -t tjddnjs7559/server .
+  #도커 허브 로그인
+  #아이디는 travis CI 홈페이지에 미리 넣어준다.
+  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+  #빌드된 이미지 도커 허브에 push
+  - docker push tjddnjs7559/server
