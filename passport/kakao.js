@@ -1,5 +1,7 @@
 const passport = require("passport");
 const { Strategy: KakaoStrategy } = require("passport-kakao");
+const dotenv = require("dotenv");
+dotenv.config();
 
 // models
 const {

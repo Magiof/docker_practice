@@ -16,7 +16,7 @@ script:
   - docker run -e CI=true tjddnjs7559/nemo_test npm run dev
 
 after_success:
-  #각 이미지 빌드 
+  #이미지 빌드 
   - docker build -t tjddnjs7559/nemo_test .
   #도커 허브 로그인
   #아이디는 travis CI 홈페이지에 미리 넣어준다.
