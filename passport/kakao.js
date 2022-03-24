@@ -22,7 +22,7 @@ module.exports = () => {
   passport.use(
     new KakaoStrategy(
       {
-        clientID: b60b1caa32fdc7c0aa62e43ce7f29c2d,
+        clientID: process.env.KAKAO_REST_API_KEY,
         callbackURL: "http://localhost:3000/api/auth/kakao/callback",
       }, async (accessToken, refreshToken, profile, done) => {
         try {

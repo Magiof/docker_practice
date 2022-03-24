@@ -13,7 +13,7 @@ before_install:
   - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 
 script:
-  - docker run -e CI=true --env-file .env tjddnjs7559/nemo_test npm run dev
+  - docker run -e CI=true --env-file ./.env tjddnjs7559/nemo_test npm run dev
 
 after_success:
   #테스트 패스 메세지
