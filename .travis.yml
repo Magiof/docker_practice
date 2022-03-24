@@ -1,29 +1,18 @@
-language: node_js
-  - node
-
+language: node_js - node
 branches:
- only:
-   - main
-
+  only:
+  - main
 services:
-  - docker
-
+- docker
 before_install:
-  - openssl aes-256-cbc -K $encrypted_3c84dcdc6bbe_key -iv $encrypted_3c84dcdc6bbe_iv
-    -in .env.enc -out .env -d
-  - nvm install node
-  - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
-
+- openssl aes-256-cbc -K $encrypted_3c84dcdc6bbe_key -iv $encrypted_3c84dcdc6bbe_iv
+  -in .env.enc -out .env -d
+- nvm install node
+- docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 script:
-  - docker run -e CI=true tjddnjs7559/nemo_test npm run dev
-
+- docker run -e CI=true tjddnjs7559/nemo_test npm run dev
 after_success:
-  #테스트 패스 메세지
-  - echo "TEST complete, sending image to hub..."
-  #이미지 빌드 
-  - docker build -t tjddnjs7559/nemo_test .
-  #도커 허브 로그인
-  #아이디는 travis CI 홈페이지에 미리 넣어준다.
-  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
-  #빌드된 이미지 도커 허브에 push
-  - docker push tjddnjs7559/nemo_test
+- echo "TEST complete, sending image to hub..."
+- docker build -t tjddnjs7559/nemo_test .
+- echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+- docker push tjddnjs7559/nemo_test
