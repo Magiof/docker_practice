@@ -31,8 +31,8 @@ deploy:
   app: "nemo_test"
   #elasticbeanstalk을 위한 s3 버켓이름
   env: "Nemotest-env"
-  bucket_name: elasticbeanstalk-ap-northeast-2-291897759134
-  bucket_path: "nemo_test"
+  # bucket_name: elasticbeanstalk-ap-northeast-2-291897759134
+  # bucket_path: "nemo_test"
   #특정 branch에만 해당 aws서버에 올릴 수 있게 설정해두었다.
   on:
     branch: main
