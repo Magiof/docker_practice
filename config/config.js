@@ -6,7 +6,7 @@ module.exports = {
     "username": "root",
     "password": process.env.SQUARE_WITH_ME_DB_PASSWORD,
     "database": "Square_with_me_database",
-    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com/",
+    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -14,7 +14,7 @@ module.exports = {
     "username": "root",
     "password": process.env.SQUARE_WITH_ME_DB_PASSWORD,
     "database": "Square_with_me_database",
-    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com/",
+    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -22,7 +22,7 @@ module.exports = {
     "username": "root",
     "password": process.env.SQUARE_WITH_ME_DB_PASSWORD,
     "database": "Square_with_me_database",
-    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com/",
+    "host": "nemo-test-mysql.cgxqbbyivfqr.ap-northeast-2.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   }
