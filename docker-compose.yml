@@ -1,6 +1,6 @@
 version: "3.5"
-networks:
-  nemo-net:
+# networks:
+#   nemo-net:
 services:
   # mysql:
   #   networks:
@@ -14,8 +14,8 @@ services:
   #   environment:
   #     - MYSQL_ROOT_PASSWORD="${SQUARE_WITH_ME_DB_PASSWORD}"
   server:
-    networks:
-      - nemo-net
+    # networks:
+    #   - nemo-net
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -29,7 +29,7 @@ services:
        MYSQL_HOST: mysql 
        MYSQL_USER: root
        MYSQL_ROOT_PASSWORD: ${SQUARE_WITH_ME_DB_PASSWORD}
-       MYSQL_DATABASE: sqare_with_me
+       MYSQL_DATABASE: Square_with_me_database
        MYSQL_PORT: 3306
     # depends_on:
     #   - mysql

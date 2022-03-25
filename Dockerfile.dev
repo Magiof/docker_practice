@@ -25,4 +25,4 @@ COPY . .
 # ENTRYPOINT ./docker-entrypoint.sh
 
 # Exports
-EXPOSE 8080
+EXPOSE 8088
