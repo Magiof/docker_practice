@@ -24,18 +24,18 @@ after_success:
 
 deploy:
   #외부 서비스 표시(s3, elesticbeanstalk, firebase 등등)
-  provider: elasticbeanstalk
+- provider: elasticbeanstalk
   # IAM 계정으로 부터 생성해서 travis ci에 저장해둔 key
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   #현재 사용하고 있는 AWS의 서비스가 위치하고있는 물리 장소
-  region: "ap-northeast-2"
+  region: ap-northeast-2
   #생성된 어플리케이션의 이름
-  app: "nemo_test"
+  app: nemo_test
   #elasticbeanstalk을 위한 s3 버켓이름
-  env: "Nemotest-env"
+  env: Nemotest-env
   bucket_name: elasticbeanstalk-ap-northeast-2-291897759134
-  bucket_path: "nemo_test"
+  bucket_path: nemo_test
   #특정 branch에만 해당 aws서버에 올릴 수 있게 설정해두었다.
   on:
     branch: main
