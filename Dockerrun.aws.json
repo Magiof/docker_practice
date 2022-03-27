@@ -9,7 +9,7 @@
         "memory": 128,
         "Ports": [
             {
-              "ContainerPort": "8088"
+              "ContainerPort": "80"
             }
           ]
       }
