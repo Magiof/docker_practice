@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "nemo-backend-sw",
+    "Name": "tjddnjs7559/nemo_test:latest",
     "Update": "true",
     "essential": false,
     "memory": 128
