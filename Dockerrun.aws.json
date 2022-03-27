@@ -7,12 +7,11 @@
         "hostname": "backend",
         "essential": false,
         "memory": 128,
-        "portMappings": [
-          {
-            "hostPort": 80,
-            "containerPort": 80
-          }
-        ]
+        "Ports": [
+            {
+              "ContainerPort": "8088"
+            }
+          ]
       }
     ]
   }

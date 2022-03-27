@@ -9,7 +9,7 @@ services:
     env_file:
       - .env
     ports:
-      - "${PORT}:80"
+      - "${PORT}:8088"
     environment:
        MYSQL_HOST: mysql 
        MYSQL_USER: root
