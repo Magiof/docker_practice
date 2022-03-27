@@ -1,18 +1,10 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "containerDefinitions": [
-      {
-        "name": "backend",
-        "image": "tjddnjs7559/nemo_test",
-        "hostname": "backend",
-        "essential": false,
-        "memory": 128,
-        "Ports": [
-            {
-              "ContainerPort": "80"
-            }
-          ]
-      }
-    ]
-  }
-  
+  "AWSEBDockerrunVersion": 1,
+  "Image": {
+    "Name": "nemo-backend-sw",
+    "Update": "true",
+    "essential": false,
+    "memory": 128
+  },
+  "Ports": [{ "ContainerPort": 80 }]
+}
