@@ -1,10 +1,10 @@
 {
-  "AWSEBDockerrunVersion": "3",
+  "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "nemo-test-BE",
+    "Name": "tjddnjs7559/nemo_test:latest",
     "Update": "true",
     "essential": false,
     "memory": 128
   },
-  "Ports": [{ "ContainerPort": 80 }]
+  "Ports": [{ "ContainerPort": 8088 }]
 }

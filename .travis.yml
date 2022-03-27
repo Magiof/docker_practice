@@ -27,7 +27,6 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: ap-northeast-2
   app: nemo_test
-  #elasticbeanstalk을 위한 s3 버켓이름
   env: Nemotest-env
   bucket_name: elasticbeanstalk-ap-northeast-2-291897759134
   skip_cleanup: true
