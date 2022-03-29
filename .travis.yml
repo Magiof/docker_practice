@@ -16,6 +16,7 @@ script:
 - docker run -e CI=true --env-file .env tjddnjs7559/nemo_test npm run test
 
 after_success:
+- npx sequelize db:seed:all
 - echo "TEST complete, sending image to hub..."
 - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin

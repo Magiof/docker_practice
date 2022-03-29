@@ -13,9 +13,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Add seeder
-RUN npx sequelize db:seed:all
-
 # Exports
 EXPOSE 8088
 
