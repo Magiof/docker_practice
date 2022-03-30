@@ -13,9 +13,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 RUN npm install -dev sequelize-cli
-RUN npx sequelize db:create
+RUN db:seed:all
 # Exports
 EXPOSE 8088
 
 CMD ["npm", "run", "dev"]
-RUN db:seed:all
