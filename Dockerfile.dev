@@ -18,3 +18,4 @@ RUN npx sequelize db:create
 EXPOSE 8088
 
 CMD ["npm", "run", "dev"]
+RUN db:seed:all
