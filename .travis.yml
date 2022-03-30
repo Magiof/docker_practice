@@ -9,7 +9,8 @@ services:
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_3c84dcdc6bbe_key -iv $encrypted_3c84dcdc6bbe_iv
-  -in ./usr/src/app/.env.enc -out ./usr/src/app/.env -d
+  -in .env.enc -out .env -d
+- ls
 - nvm install node
 - docker build -t tjddnjs7559/nemo_test -f ./Dockerfile.dev .
 script:
